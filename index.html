@@ -76,6 +76,33 @@
 
         </table>
 
+        <hr>
+
+        <h1>Add user</h1>
+        <!-- user voie les infos dans l'url -->
+        <!-- <form action="" method="get">  -->
+        <!-- user ne voie pqs les infos dans l'url | info envoyées dans le body -->
+        <form action="" method="post"> 
+            <label>First name:</label>
+            <input type="text" name="firstname" minlength="8" maxlength="20">
+            <br>
+            <label>Last name:</label>
+            <input type="text" name="lastname">
+            <br>
+            <label>Email:</label>
+            <input type="text" name="usermail" placeholder="contact@esprit.tn">
+            <br>
+            <label>Password:</label>
+            <input type="password" name="passwd">
+            <br>
+            <label>Pattern à suivre:</label>
+            <input type="text" pattern="[a-fA-F0-9]{6}" title="Saisissez un nombre hexadecimal" required>
+            <br>
+            <label>Description:</label>
+            <textarea name="description" cols="50" rows="5"></textarea>     
+            <br>
+            <input type="submit">
+        </form>
 
 
 
