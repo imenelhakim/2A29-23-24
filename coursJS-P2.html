@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cours JS - P2</title>
+</head>
+
+<body>
+    <input type="text" id="myInput" placeholder="Type something...">
+
+    <p>Hello</p>
+    <strong onclick="displayAlert()">Bold text</strong>
+    <p>World</p>
+
+    <button id="myButton">Valider</button>
+
+
+    <input type="text" onkeyup="showCount()" onkeydown="addCount()">
+
+    
+
+    <script>
+        
+        function ajouterElement(){
+            var titre = document.createElement("h1")
+            var contenu = document.createTextNode('Hello 2A29')
+            titre.appendChild(contenu)
+
+            var myInput = document.getElementById("myInput");
+            document.body.insertBefore(titre, myInput);
+
+        }
+
+        document.body.onload = ajouterElement()
+
+
+        element = document.querySelector('p');
+        console.log(element); 
+
+        elements = document.querySelectorAll('p');
+        console.log(elements);
+
+
+        // Events
+        // Méthode1 : action + callback
+        function displayAlert(){
+            alert('Vous avez cliqué sur le bouton')
+        }
+
+        // Méthode2 : element.addEventListener(event, function)
+        var myBtn = document.getElementById("myButton");
+        myBtn.addEventListener('click',function(){
+            alert('Vous avez cliqué sur le bouton avec addEventListener')
+        })
+
+        var i=0
+        function addCount() {
+            i++
+        }
+
+        function showCount(){
+            console.log(i);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
